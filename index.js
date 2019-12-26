@@ -12,7 +12,7 @@ class GTranslateTTS {
         }
     }
 
-    parseURL(text, lang) {
+    _parseURL(text, lang) {
 
         if (lang) {
             this.attributes.tl = lang;
@@ -27,10 +27,10 @@ class GTranslateTTS {
 
         path += 'q=' + text + '&textLen=' + text.length;
 
-        return path;
+        return encodeURI(path);
     };
 
-    writeFile(filename, data) {
+    _writeFile(filename, data) {
         if (filename.substring(filename.length - 4, filename.length) !== '.mp3') { // If the mp3 extension is missing then it's added
             filename += '.mp3';
         }
@@ -49,7 +49,7 @@ class GTranslateTTS {
 
             self.getMp3(text, lang).then(function (data) {
 
-                const file = self.writeFile(fileName, data);
+                const file = self._writeFile(fileName, data);
                 resolve(fs.realpathSync(file));
 
             }).catch(function (err) {
@@ -63,7 +63,7 @@ class GTranslateTTS {
     getMp3(text, lang) {
 
         let data = [];
-        let path = this.parseURL(text, lang);
+        let path = this._parseURL(text, lang);
 
         return new Promise(function (resolve, reject) {
 
