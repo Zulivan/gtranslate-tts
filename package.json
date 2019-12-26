@@ -1,0 +1,22 @@
+{
+  "name": "gtranslate-tts",
+  "version": "1.0.0",
+  "description": "Use Google's voice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zulivan/gtranslate-tts.git"
+  },
+  "keywords": [
+    "tts"
+  ],
+  "author": "Zulivan, enricoaleandri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zulivan/gtranslate-tts/issues"
+  },
+  "homepage": "https://github.com/Zulivan/gtranslate-tts#readme"
+}
