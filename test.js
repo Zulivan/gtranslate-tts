@@ -1,6 +1,6 @@
 const tts = require('./index.js');
 
-tts.saveMP3('Oh my gosh! Les baguettes sont très bonnes oui oui.', 'test_en.mp3', ).then((absoluteFilePath) => {
+tts.saveMP3('Oh my gosh! Les baguettes sont très bonnes oui oui.', 'test_en.mp3').then((absoluteFilePath) => {
     console.log('The file is saved: ' + absoluteFilePath);
 }).catch((err) => {
     console.log(err);
