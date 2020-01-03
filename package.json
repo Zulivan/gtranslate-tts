@@ -1,6 +1,6 @@
 {
   "name": "gtranslate-tts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Use Google's voice",
   "main": "index.js",
   "scripts": {
